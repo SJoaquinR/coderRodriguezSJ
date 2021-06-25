@@ -1,0 +1,108 @@
+/* Seccion Galeria - Con Grid */
+@import '../base/mixin';
+
+@keyframes flash {
+	0% {
+		opacity: .4;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+/* Padre */
+.galeria-grid {
+    margin-left: auto;
+    margin-right: auto;
+
+    display: grid;
+
+    @include grid-galery (1fr 1fr 1fr 
+                            , 1fr 1fr 1fr
+                            , "img1 img1 img4" 
+                            "img1 img1 img6" 
+                            "img5 img2 img3");
+    // grid-template-columns: 1fr 1fr 1fr;
+    // grid-template-rows: 1fr 1fr 1fr;
+    /* cambiar de posicion */
+    // grid-template-areas: 
+    // "img1 img1 img4"
+    // "img1 img1 img6"
+    // "img5 img2 img3";
+    
+    /* justify-self: center; */
+    width: 100%;
+    /* Espacio entre imagenes */
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+}
+
+/* Hijos */
+.galeria-grid__thumbnail {
+    display: flex;
+    flex-direction: column;  
+}
+
+.galeria-grid__img {
+    width: 100%;
+    border: solid 1px white;  
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);   
+    
+    &:hover {
+        opacity: 1;
+        animation: flash 1.5s;
+    }
+}
+
+.galeria-grid__thumbnail--img1 {
+    grid-area: img1;
+}
+
+.galeria-grid__thumbnail--img2 {
+    grid-area: img2;
+}
+
+.galeria-grid__thumbnail--img3 {
+    grid-area: img3;
+}
+
+.galeria-grid__thumbnail--img4 {
+    grid-area: img4;
+}   
+
+.galeria-grid__thumbnail--img5 {
+    grid-area: img5;
+}
+
+.galeria-grid__thumbnail--img6 {
+    grid-area: img6;
+}
+/* FIN Seccion Galeria */
+
+@media (min-width: 641px) and (max-width: 1024px) {
+    /* Seccion Galeria */
+/* Padre */
+.galeria-grid {
+    @include grid-galery (1fr 1fr, 1fr, unset);
+  }
+
+  /* Hijos */
+  .galeria-grid__thumbnail {
+      grid-area: unset;
+  }
+/* FIN Seccion Galeria */
+}
+
+@media (max-width: 640px) {
+    /* Seccion Galeria */
+    /* Padre */
+    .galeria-grid {
+        @include grid-galery (auto, 1fr, unset);
+      }
+  
+      /* Hijos */
+      .galeria-grid__thumbnail {
+          grid-area: unset;
+      }
+    /* FIN Seccion Galeria */
+}

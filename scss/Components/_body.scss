@@ -1,0 +1,11 @@
+
+/* Imagen de fondo en el body */
+body {
+    background-image: url('../images/fondo.jpg');
+    background-position: top;
+    /*background-repeat: no-repeat;
+    background-size: contain;*/
+    background-attachment: fixed;
+}
+
+

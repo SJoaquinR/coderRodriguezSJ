@@ -1,0 +1,8 @@
+
+@use "sass:math";
+
+@mixin image-border($size, $circle: false) {   
+    @if $circle {
+      border-radius: math.div($size, 2)
+    }
+  }

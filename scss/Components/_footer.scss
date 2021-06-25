@@ -1,0 +1,37 @@
+@import '../base/variables';
+
+/* Footer */
+footer {
+    margin-top: 50px;
+    padding: 1.5em;
+    background: radial-gradient(circle, rgba(106,98,101,1) 50%, rgba(133,170,215,0.8718837876947654) 95%);
+    border: 1px #bbb solid;
+    opacity: .8;
+
+    .redes {
+        margin-bottom: 1.5em;
+        width: $width-100; 
+        text-align: center;
+    }
+
+    .redes__thumbnail {
+        text-decoration: none;
+    }
+    
+    .redes__img {
+        width: 40px; 
+        border-radius: 40px; 
+        margin: 5px;
+    
+        &:hover {
+            transform: scale(1.4);
+        }
+    }
+    
+    .firma {
+        width: $width-100;
+        text-align: center;
+        color: midnightblue;  
+    }
+}
+/* FIN Footer */

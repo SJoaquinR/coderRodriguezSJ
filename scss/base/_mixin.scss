@@ -1,0 +1,13 @@
+@import '../base/extend';
+@import '../base/condicion';
+
+@mixin grid-galery ($col, $row, $area) {
+    grid-template-columns: $col;
+    grid-template-rows: $row;
+    grid-template-areas: $area;
+}
+
+@mixin sombra-borde ($sizeBorder, $borderInclude) {
+    @extend %image-sombra;
+    @include image-border($sizeBorder, $borderInclude);
+}

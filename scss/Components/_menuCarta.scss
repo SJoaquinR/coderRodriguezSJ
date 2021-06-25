@@ -1,0 +1,15 @@
+@import '../base/extend';
+@import '../base/mixin';
+
+/* Seccion Menu Carta */
+.menu-carta-item {
+    @include sombra-borde (map-get($size-border, xl), true);
+     
+    filter: sepia(100%);
+    transition: .3s ease-in-out;
+
+    &:hover {
+        filter: sepia(0);
+    } 
+}
+/* FIN Seccion Menu Carta */

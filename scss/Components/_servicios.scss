@@ -1,0 +1,28 @@
+/* Seccion Servicios */
+.sec-services-item li {
+    font-size: 25px;
+    font-weight: bold;
+
+    &::before {
+      content: "•";
+      padding-right: 8px;
+      color: blue; 
+    }
+}
+/* FIN Seccion Servicios */
+
+@media (min-width: 641px) and (max-width: 1024px) {
+   /* Seccion Servicios */
+   .sec-services-item li {
+    font-size: 20px;
+}
+/* FIN Seccion Servicios */
+}
+
+@media (max-width: 640px) {
+      /* Seccion Servicios */
+      .sec-services-item li {
+        font-size: 18px;
+    }
+    /* FIN Seccion Servicios */
+}

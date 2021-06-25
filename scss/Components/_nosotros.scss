@@ -1,0 +1,52 @@
+@import '../base/mixin';
+
+/* Seccion Nosotros */
+@keyframes transparent {
+	0% {
+		opacity: 1;
+	}
+    50% {
+        opacity: .5;
+    }
+	100% {
+		opacity: .2;
+	}
+}
+@import '../base/mapas';
+.us-image {
+    padding-top: 6em;
+
+    .imageNosotros {
+       @include sombra-borde (map-get($size-border, medium), false);
+    }
+    
+    .imageNosotrosSuperpuesta {
+        @include sombra-borde (map-get($size-border, big), true);
+        margin-top: -75%;
+        margin-left: 50%;
+    
+        &:hover {
+            opacity: .1;
+            animation: transparent 1.5s;
+        }
+    }
+
+    .us-item h2 {
+        padding-bottom: 1em;
+    }
+}
+/* FIN Seccion Nosotros */
+
+@media (min-width: 641px) and (max-width: 1024px) {
+    /* Seccion Nosotros */
+     .imageNosotrosSuperpuesta {
+        display: none;
+    }
+}
+
+@media (max-width: 640px) {
+    /* Seccion Nosotros */
+    .imageNosotrosSuperpuesta {
+        display: none;
+    }
+}
